@@ -1,4 +1,4 @@
-## Instructions to use Django on window
+## Instructions to use Django on window and create your fist project
 
 1) Download django form window power shell, to download Django from terminal use this command "pip install django" make sure you are connected with internet
 
