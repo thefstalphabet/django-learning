@@ -1,0 +1,17 @@
+## Instructions to use Django on window
+
+1) Download django form window power shell, to download Django from terminal use this command "pip install django" make sure you are connected with internet
+
+2) After downloading make a directory name Django projects.
+
+3) Then open window power sell in Django project directory.
+
+4) Now we have to init starter file of Django, to init file use this command "django-admin startproject projectname"
+
+5) this command automaticly create a directory
+
+6) After that we have to run server, to run server we have to open a directory you created previously where we see a file called manage.py that is the server file
+
+7) to run this file open window power shell on current directory and use this command "python manage.py runserver"
+
+8) Congo your sucess full create a django project
