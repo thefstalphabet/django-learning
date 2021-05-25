@@ -1,0 +1,36 @@
+## How to connect with server in django
+
+1) To connect with the server we have to create a file called views.py in this path projectfolder/projectfolder/ 
+
+2) After this we have to open file called urls.py
+
+3) then we have to connect views.py to urls.py, to connect add this line on urls.py file
+
+# connecting views file
+from . import views
+
+4) after connecting we have to add a line to give a home page path, to add this path add this line in urls pattern section in urls.py
+
+ # for home page
+ path('', views.homepage, name="homepage"),
+
+5) after this open views file
+
+6) then import a module, to import module add this line
+
+# import httpResuest module from django.http
+from django.http import HttpResponse 
+
+7) after this create a function to provide content on home page, to create a function add this lines
+
+def homepage(request):
+    return HttpResponse("Hello")
+
+6) after compliting this we have to run our server, to run server we have to run manage.py
+
+7) open a terminal where manage.py exists and run this command "python manage.py runserver"
+
+8) when server is running copt the web link from terminal, the link looks like this "http://127.0.0.1:8000/"
+
+9) congo you are now live
+
