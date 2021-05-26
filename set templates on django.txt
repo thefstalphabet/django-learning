@@ -64,41 +64,4 @@ urlpatterns = [
     path('', views.home, name='home'),       # this path goes on view file and find homepage function and show the content 
 ]
 
-10) after this you hit server and your HTML content will shows in browser
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+10) after this you hit server and your HTML content will shows in browser.
