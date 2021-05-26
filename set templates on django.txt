@@ -1,0 +1,104 @@
+## How to set templates on django projects (Templates means a file like html which we have use to show our website design)
+
+follow the steps to set templates on django project :
+
+1) open your project directory and create a directory called templates
+
+2) then open template directory and create index.html
+
+3) after this you have find a file called setting.py on you project folder
+
+4) after finding that file open the file on IDE and in that file you find a section like this
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],                                                          # here we tell Django that i have a template folder to store html
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+in this section you find a line like this 
+
+'DIRS' : []
+
+in bracits you have to write a directory name which you have create previously
+
+5) after this you find another file called views.py in project folder
+
+6) open that file on your IDE
+
+7) you have to import render from django.sortcuts, to import that module write this line
+
+# here we import render from django.shortcuts to request template files like html
+from django.shortcuts import render
+
+6) after this create a function called home, like this
+
+# givinh content to home page from render 
+def home(request):
+    info = {'name': 'john', 'address': 'USA'}
+    return render(request, 'index.html', info)            # rander takes three argument req,filename,dictonary
+
+7) after creating function you find a file called urls.py and open this file on your IDE
+
+8) after opening add a line in urlpatterns
+
+9) to add line write this
+
+urlpatterns = [
+    path('admin/', admin.site.urls),                 # this path is for urls of our website
+
+    # in first argument give a path blank means home page
+    #  in second we tell to path goes in view.py and find function
+    # in third arugument we have given a name to the path
+
+    path('', views.home, name='home'),       # this path goes on view file and find homepage function and show the content 
+]
+
+10) after this you hit server and your HTML content will shows in browser
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
