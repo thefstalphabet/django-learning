@@ -1,0 +1,60 @@
+## how to make a apps in Django folder
+
+1) to make a app in django file you have to write this command in terminal "python ./manage.py startapp appname"
+this will create a directory that is app directory
+
+2) after creating app you go inside the app directory and create a directory called templates and insite template you make a directory called same as your appname.
+here you store all you html files
+
+3)inside the app directory and you also create a directory called static and insite static you make a directory called same as your appname.
+here you store all you static files
+
+4) after this you find a setting.py on your project directory, then inside this  section you find a section called installed app like this
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'appname',
+]
+
+in this section you write name of your app then.
+
+5) then you find urls.py file where you find setting.py, after open urls.py you want add some code like this
+
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+
+    # for chatting
+    path('appname/', include('appname.urls')),
+]
+
+6) after that you create a file named urls.py inside the app directory, after creating you want to add the line of code like this
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+
+    # for chatting
+    path('', views.index, name='appname index'),
+]
+
+7) after that you find an file in the app directory called views and add lines like this
+
+from django.shortcuts import render
+
+# Create your views here.
+from django.http import HttpRequest
+
+def index(request):
+    return render(request, 'appname/index.html')
+
+8) after this you open a template directory awhich you have created in app folder, then go inste the tempate and also go insite the appname directory 
+then create a index.html file and hit the server then all set 
