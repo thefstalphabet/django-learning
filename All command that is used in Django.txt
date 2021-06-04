@@ -1,0 +1,15 @@
+1) To create new project run this command : django-admin startproject projectname
+
+2) To create a app in project directory run this command : python .\manage.py startapp appname
+
+3) to rrun a server run this command : python .\manage.py runserver
+
+4) to create migration run this command : python .\manage.py makemigrations
+
+5) to migrat run this command : python .\manage.py migrate
+
+6) to create super user admin pannel run this command : python .\manage.py createsuperuser
+
+7) to load static files write this line : {%load static%} then in link write this {%static 'yourfilelink'%}
+
+8) to use shell run this command : python .\manage.py shell 

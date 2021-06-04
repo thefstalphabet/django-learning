@@ -1,0 +1,59 @@
+## To use MongoDB after installing
+
+1) first check your mongoDB install or not, to check run this command on window power shell : mongo --version
+
+2) yThen ou want to run this command in window power shell to run server of MOngoDB : mongod
+
+3) after this you want to open another window power shell becouse in last terminal you run the server soo you can't perform CRUD opration there
+
+4) then you run this command in new terminal to open MongoDB shell to perform CRUD performance : mongo
+
+5) to know all command use in CRUD opration type help
+
+
+
+## commands of mongoDB
+
+1) help : to know some commands
+
+2) show dbs : to know number of dbs are create already
+
+3) use dbname : to create and inter in database
+
+4) show collections : to know all the tables name in data base
+
+
+
+## To insert data
+
+5) db.dbtablename.insertOne({
+
+_id : 1, name : "Akash", address : "UAE"
+
+})
+
+
+
+## to Read data
+
+this command use to insert one data in table
+
+6) db.dbtablename.find() : to know data on the table
+
+7) db.dbtablename.find(Your Query) : to know about a specific data on the table
+
+
+
+## to update data
+
+8) db.tablename.updateOne({_id:1}, {$set: {newdataname: "newdatavalue"}}) : this will create a column in id = 1 row
+
+
+
+## to Delete data
+
+8) db.tablename.deleteOne({your query}) : this will delete your data on your giving query
+
+9) to delete a data base first you want to go inside that database you want to delete then run this comand : db.dropDatabase()
+
+
